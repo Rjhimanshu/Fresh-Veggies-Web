@@ -1,0 +1,88 @@
+.savedAddressContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addressCard {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.addressActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.addressActions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addressActions button:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.addressActions button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.addAddressButton {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.addressForm {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.addressForm h2 {
+  margin-bottom: 16px;
+}
+
+.addressForm input,
+.addressForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addressForm button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.addressForm button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.addressForm button[type="button"] {
+  background-color: #dc3545;
+  color: #fff;
+}

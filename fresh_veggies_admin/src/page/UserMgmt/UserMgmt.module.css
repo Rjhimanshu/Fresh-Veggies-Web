@@ -1,0 +1,263 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.searchContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.filterContainer {
+  min-width: 200px;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.addButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background-color: #388e3c;
+}
+
+.addButton:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Form styles */
+.form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submitButton:hover {
+  background-color: #388e3c;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Table styles */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.userId {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Role badges */
+.roleBadge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.roleBadge.customer {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.roleBadge.retailer {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.roleBadge.wholesaler {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.editButton:hover {
+  background-color: #1976d2;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Loading and empty states */
+.loading, .noResults {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+  
+  .searchContainer,
+  .filterContainer {
+    min-width: 100%;
+  }
+  
+  .table th, .table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .editButton, .deleteButton {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}

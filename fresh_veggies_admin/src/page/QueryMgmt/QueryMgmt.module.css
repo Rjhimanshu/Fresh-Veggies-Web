@@ -1,0 +1,176 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .searchContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .searchContainer input,
+  .searchContainer select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .searchContainer input:focus,
+  .searchContainer select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .chatButton {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .chatButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .chatOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .chatContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .chatContainer h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .closeButton:hover {
+    color: #000;
+  }
+  
+  .chatMessages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 80%;
+  }
+  
+  .adminMessage {
+    background-color: #007bff;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .userMessage {
+    background-color: #f1f1f1;
+    color: #333;
+    margin-right: auto;
+  }
+  
+  .message p {
+    margin: 0;
+  }
+  
+  .message span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .chatInput {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chatInput textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  .chatInput button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .chatInput button:hover {
+    background-color: #0056b3;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+  }

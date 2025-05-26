@@ -1,0 +1,69 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input,
+.textarea,
+.select,
+.fileInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.select {
+  appearance: none;
+  background-color: white;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: 15px;
+  text-align: center;
+}

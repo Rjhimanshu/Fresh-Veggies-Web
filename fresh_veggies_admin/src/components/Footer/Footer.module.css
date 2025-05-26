@@ -1,0 +1,151 @@
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.leftSection {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.rightSection {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #2ecc71;
+}
+
+.contactInfo {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.contactIcon {
+  font-size: 1rem;
+  color: #2ecc71;
+}
+
+.bottomBar {
+  background-color: #1a252f;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #2ecc71;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .rightSection {
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .contactInfo {
+    text-align: left;
+  }
+
+  .contactInfo p {
+    justify-content: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .socialIcons {
+    gap: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1.3rem;
+  }
+}

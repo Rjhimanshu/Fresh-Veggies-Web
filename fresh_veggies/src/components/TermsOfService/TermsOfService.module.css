@@ -1,0 +1,57 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .lastUpdated {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+  }
+  
+  .sectionText {
+    line-height: 1.6;
+    color: #34495e;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 1.5rem;
+    }
+    
+    .title {
+      font-size: 1.7rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.2rem;
+    }
+  }

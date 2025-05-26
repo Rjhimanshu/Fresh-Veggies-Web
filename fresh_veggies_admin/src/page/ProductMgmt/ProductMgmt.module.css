@@ -1,0 +1,217 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Price statistics */
+.priceStats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.priceStat {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.priceStat h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.priceStat p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.searchContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.filterContainer {
+  min-width: 200px;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Table styles */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.productImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.editButton:hover {
+  background-color: #1976d2;
+}
+
+.updateButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.updateButton:hover {
+  background-color: #388e3c;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Loading and empty states */
+.loading, .noResults {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .priceStats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  .searchContainer,
+  .filterContainer {
+    min-width: 100%;
+  }
+  
+  .table th, .table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .editButton, .updateButton, .deleteButton, .cancelButton {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  
+  .productImage {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,338 @@
+/* ===== Base Navbar Styles ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Navbar Container */
+.navContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(to right, #fff, #f5f5f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Mobile Menu Button ===== */
+.mobileMenuIcon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1002;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileMenuIcon:hover {
+  transform: rotate(90deg);
+}
+
+/* ===== Desktop Navigation ===== */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.cartButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cartButton:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.cartBadge {
+  position: relative;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* ===== Account Dropdown ===== */
+.profileDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profileButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
+
+.profileButton:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.dropdownContent {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: top right;
+  animation: scaleIn 0.2s ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.dropdownLink {
+  color: #333;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.dropdownLink:hover {
+  background: #cdc8c8;
+  color: #3498db;
+}
+
+/* ===== Mobile Navigation ===== */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(44, 62, 80, 0.98);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  z-index: 1001;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobileNav.active {
+  transform: translateX(0);
+}
+
+.mobileNavLink {
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.mobileNavLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(8px);
+}
+
+.mobileNavLink .cartBadge {
+  position: static;
+  margin-left: 8px;
+}
+
+/* Animation for the badge */
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.cartBadge {
+  animation: bounce 0.5s ease;
+}
+
+/* ===== Mobile Account Dropdown ===== */
+.mobileDropdownButton {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.mobileDropdownButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(8px);
+}
+
+.mobileDropdownContent {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.mobileDropdownLink {
+  color: rgb(255, 255, 255);
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.mobileDropdownLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(6px);
+}
+
+/* ===== Logout Button Styling ===== */
+.logoutButton {
+  background: #e74c3c; /* Red background */
+  color: white !important;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  text-align: left;
+  width: 100%;
+  display: block;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: #c0392b; /* Darker red on hover */
+}
+
+.cartError {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 5px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 992px) {
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+  }
+}
+
+@media (min-width: 993px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,372 @@
+/* Main Container */
+.adminContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .pageTitle {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+  }
+  
+  .errorMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Filters */
+  .filtersContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .filterGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filterGroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.95rem;
+  }
+  
+  .filterGroup input,
+  .filterGroup select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+  }
+  
+  .filterGroup input:focus,
+  .filterGroup select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Reviews Table */
+  .reviewsTableContainer {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .reviewsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .reviewsTable th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .reviewsTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+  }
+  
+  .reviewsTable tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  /* Table Cells */
+  .userCell {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userName {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .userEmail {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  
+  .roleBadge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .roleBadge.customer {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .roleBadge.retailer {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+  
+  .roleBadge.wholesaler {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .stars {
+    color: #FFD700;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  
+  .comment {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .reviewImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .reviewImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .reviewImage:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dateCell {
+    white-space: nowrap;
+  }
+  
+  .time {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.2rem;
+  }
+  
+  /* Action Buttons */
+  .actionsCell {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  
+  .editButton {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Edit Modal */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+  }
+  
+  .closeButton:hover {
+    color: #495057;
+  }
+  
+  .editForm {
+    margin-top: 1.5rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .starRating {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .star {
+    font-size: 1.8rem;
+    color: #e9ecef;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #FFD700;
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .textarea:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .cancelButton,
+  .saveButton {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .cancelButton {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .cancelButton:hover {
+    background-color: #5a6268;
+  }
+  
+  .saveButton {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background-color: #218838;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .filtersContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .reviewsTable th,
+    .reviewsTable td {
+      padding: 0.8rem;
+    }
+    
+    .actionsCell {
+      flex-direction: column;
+    }
+  }
